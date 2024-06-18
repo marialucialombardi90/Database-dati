@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Filter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .table thead th {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+        .form-control, .btn {
+            border-radius: 50px;
+        }
+        .filter-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col">
+                <h2 class="text-center">User Directory</h2>
+            </div>
+        </div>
+        <div class="row mb-3 filter-group">
+            <div class="col-md-4">
+                <select id="filterOption" class="form-control">
+                    <option value="name">Filter by Name</option>
+                    <option value="username">Filter by Username</option>
+                    <option value="email">Filter by Email</option>
+                </select>
+            </div>
+            <div class="col-md-8">
+                <input type="text" id="filterInput" class="form-control" placeholder="Type to search...">
+            </div>
+        </div>
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
